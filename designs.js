@@ -1,10 +1,10 @@
-const DEFAULT_COLOR = '#8080ff'; // default color for first color
-const CLEAR_COLOR = '#E7E9F7'; // default color for erasing
+const defaultColor = '#8080ff'; // default color for first color
+const clearColor = '#E9BEDA'; // default color for erasing
 
 
 
-function setDefaultValues() {
-    $('#colorPicker').val(DEFAULT_COLOR);
+function setDefaultVal() {
+    $('#colorPicker').val(defaultColor);
 }
 
 function makeGrid() {
@@ -23,7 +23,7 @@ function makeGrid() {
     }
 }
 
-/** Function to clear the table after entering new values **/
+/** Function to clear the table **/
 function clearTable() {
     const $table = $('#pixelCanvas');
     $table.html('');
@@ -36,14 +36,14 @@ function paintCell($cell, color) {
 }
 
 (function runApp() {
-    setDefaultValues();
+    setDefaultVal();
     $('#sizePicker').submit(function(event) {
         event.preventDefault();
         clearTable();
         makeGrid();
     });
 
-    // Attach event listener on cell
+    //event listener on cell
     $('#pixelCanvas').on('click', 'td', function() {
         let $cell = $(this);
         paintCell($cell);
@@ -61,7 +61,7 @@ function paintCell($cell, color) {
             paintCell($cell);
         }
     });
-    /**
+    /*
      * When mouse is up then we know dragging has ended
      * When mouse leaves the canvas. Set isDragging to false
      */
@@ -69,8 +69,9 @@ function paintCell($cell, color) {
         isDragging = false;
     });
 
-    //disabled right click
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    //disabled mouseout
+    document.addEventListener('mouseout', event => event.preventDefault());
+
 })();
 
 /** When user selects CLEAR button  - animation clears canvas **/
@@ -82,7 +83,7 @@ function eraseCanvas() {
         const height = $('#inputHeight').val();
         const width = $('#inputWidth').val();
         let $cell = $('#pixelCanvas tr td:eq(' + x + ')');
-        paintCell($cell, CLEAR_COLOR);
+        paintCell($cell, clearColor);
         if (x < (height * width)) {
             setTimeout(loop, 10);
         }
