@@ -44,7 +44,7 @@ function paintCell($cell, color) {
         makeGrid();
     });
 
-    //event listener on cell
+    //event listener
     $('#pixelCanvas').on('click', 'td', function() {
         let $cell = $(this);
         paintCell($cell);
@@ -75,7 +75,7 @@ function paintCell($cell, color) {
 
 })();
 
-/** When user selects CLEAR button  - animation clears canvas **/
+/** When user selects the CLEAR button  - animation that clears canvas **/
 function eraseCanvas() {
     let x = 0;
     loop();
