@@ -1,77 +1,94 @@
-        body {
-            text-align: center;
+    html,
+    body {
+        height: 100%;
+        /*text-align: center;*/
+        background-image: url("./img/harli-marten-140106-unsplash.jpg");
+    }
+    
+    h1 {
+        color: #162741;
+        font-weight: bold;
+        text-align: center;
+        font-family: Monoton;
+        font-size: 70px;
+        margin: 0.4em;
+        animation: flashing 15s infinite;
+    }
+    
+    @keyframes flashing {
+        0% {
+            color: #275049;
         }
-        
-        h1 {
-            color: #162741;
-            font-family: Monoton;
-            font-size: 70px;
-            margin: 0.2em;
-            background-color: #6baace;
-            /* Safari 4.0 - 8.0 */
-            animation-name: example;
-            animation-iteration-count: infinite;
+        25% {
+            color: #1abc9c;
         }
-        /* Safari 4.0 - 8.0 */
-        
-        @-webkit-keyframes example {
-            0% {
-                background-color: #6baace;
-            }
-            25% {
-                background-color: yellow;
-            }
-            50% {
-                background-color: blue;
-            }
-            100% {
-                background-color: #4dc248;
-            }
+        50% {
+            color: #f6fbf7;
         }
-        /* Standard syntax */
-        
-        @keyframes example {
-            0% {
-                background-color: #6baace;
-            }
-            25% {
-                background-color: yellow;
-            }
-            50% {
-                background-color: blue;
-            }
-            100% {
-                background-color: #4dc248;
-            }
+        75% {
+            color: #2980b7;
         }
-        
-        h2 {
-            margin: 1em 0 0.25em;
+        100% {
+            color: #a24e9f;
         }
-        
-        h2:first-of-type {
-            margin-top: 0.5em;
-        }
-        
-        table,
-        tr,
-        td {
-            border: 1px solid black;
-        }
-        
-        table {
-            border-collapse: collapse;
-            margin: 0 auto;
-        }
-        
-        tr {
-            height: 20px;
-        }
-        
-        td {
-            width: 20px;
-        }
-        
-        input[type=number] {
-            width: 6em;
-        }
+    }
+    
+    h2 {
+        margin: 1em 0 0.25em;
+    }
+    
+    h2:first-of-type {
+        margin-top: 0.5em;
+    }
+    
+    table,
+    tr,
+    td {
+        border: 1px solid black;
+    }
+    
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    
+    tr {
+        height: 40px;
+    }
+    
+    td {
+        width: 40px;
+    }
+    
+    input[type=number] {
+        width: 4%;
+        text-align: center;
+        outline: none;
+    }
+    
+    .col-6 {
+        width: 50%;
+    }
+    
+    button {
+        border-radius: 25px;
+        outline: none;
+        text-align: center;
+        height: 50px;
+        width: 100px;
+        background: none;
+        border: 1px solid whitesmoke;
+    }
+    
+    a {
+        color: #162741;
+    }
+    
+    footer {
+        color: #162741;
+        font-size: 20px;
+        text-align: center;
+        text-shadow: 6px 6px 8px black;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
