@@ -20,6 +20,6 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 https://mzlovelyj.github.io/project-pixel-art-maker-starter-master/
 
 
-## App Screenshot
+## Screenshot
 
-![screenshot](https://i.imgur.com/p0abTa6.png);
+![screenshot](https://i.imgur.com/p0abTa6.png)
