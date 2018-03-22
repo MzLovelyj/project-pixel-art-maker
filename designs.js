@@ -70,7 +70,7 @@ function paintCell($cell, color) {
         isDragging = false;
     });
 
-    //disabled mouseout
+    //disabled
     document.addEventListener('mouseout', event => event.preventDefault());
 
 })();
