@@ -1,9 +1,6 @@
 const defaultColor = '#8080ff'; // default color for first color
 const clearColor = '#E9BEDA'; // default color for erasing a.k.a eraseCanvas function
 
-
-
-
 function setDefaultVal() {
     $('#colorPicker').val(defaultColor);
 }
@@ -35,7 +32,6 @@ function paintCell($cell, color) {
     let chosenColor = color || colorPicker;
     $cell.css('background', chosenColor);
 }
-
 (function runApp() {
     setDefaultVal();
     $('#sizePicker').submit(function(event) {
@@ -91,3 +87,4 @@ function eraseCanvas() {
         x++;
     }
 }
+/** TODO add a clear board option **/
