@@ -17,7 +17,7 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 
 ## Demo
 
-https://mzlovelyj.github.io/project-pixel-art-maker-starter-master/
+https://mzlovelyj.github.io/project-pixel-art-maker/
 
 
 ## Screenshot
